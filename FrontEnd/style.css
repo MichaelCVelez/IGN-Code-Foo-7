@@ -1,0 +1,236 @@
+/*web page background and highest div in hierarchy*/
+body {
+	background-color: black;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+/*header to panel group which holds navigation*/
+header{
+	background-color: white;
+    font-size: 80%;
+    padding: 1%;
+}
+
+/*contains entire content including header and panels*/
+.container {
+	width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    border-radius: 8px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+/*navigation which holds Videos/Articles buttons. Allows wrapping for smaller windows*/
+.nav {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-size: 115%;
+}
+
+/*Articles and Videos buttons mutual styles */
+.articles, .videos {
+    border-bottom: 1px solid #bf1313;
+    border-top: 1px solid #bf1313;
+    color: #bf1313;
+    font-family: arial,sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 1% 17% 1%;
+    position: relative;
+    text-transform: uppercase;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/*Videos button curved border*/
+.videos {
+    border-left: 1px solid #bf1313;
+    border-radius: 2em 0 0 2em;
+}
+
+/*Articles button curved border*/
+.articles {
+    border-right: 1px solid #bf1313;
+    border-radius: 0 2em 2em 0;
+    margin: 0 0 0 -0.5em;
+}
+
+/*Active button styles, white text on red background and can't be re-clicked*/
+.active, .active:hover {
+    background-color: #bf1313;
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+/*Underline articles if hovering when it is not active*/
+.articles:hover:not(:focus)  {
+	text-decoration: underline;
+}
+
+/*Underline videos if hovering when it is not active*/
+.videos:hover:not(:focus) {
+	text-decoration: underline;
+}
+
+/*More menu at bottom of panels with background of white*/
+.moremenu {
+	background-color: white;
+}
+
+/*More videos/articles button formatting*/
+.morevideos, .morearticles{
+	font-size: 82%;
+    color: #8a8a8a;
+    font-weight: 700;
+    padding-top: 1%;
+    padding-left: 2em;
+    padding-bottom: 0.5%;
+}
+
+/*More articles/videos buttons underlined when hovered*/
+.morevideos:hover, .morearticles:hover {
+	text-decoration: underline;
+}
+
+/*Article/Video main title formatting*/
+.title{
+    font-weight: 700;
+    color: black;
+	padding-left: 1em;
+}
+
+/*Formatting of video duration and article date to right of panel*/
+.duration, .date{
+  	font-size: 90%;
+    position: absolute;
+    text-align: right;
+    top: 4.3em;
+    bottom: .7em;
+    right: 1em;
+    color: #8a8a8a;
+    font-weight: 700;
+}
+
+/*Article time since date formatting*/
+.timesince{
+	color: #8a8a8a;
+  	font-size: 90%;
+    font-weight: 400;
+    padding-left: 4em;
+}
+
+/*Video description formatting*/
+.description{
+	padding-left: 3.6em;
+	color: #8a8a8a;
+}
+
+/*Article subheading formatting*/
+.subheadline{
+	color: #8a8a8a;
+}
+
+/*Numbering of content formatting*/
+.numbering{
+	color: #545454;
+    font-weight: 700;
+    padding-left: 25px;
+}
+
+/*Group of panels connection to more menu by removing margin*/
+.panel-group {
+	margin-bottom: 0px;
+	font-size: 80%; 
+}
+
+/*Make panels straight edged*/
+.panel-group .panel {
+	margin-bottom: 0;
+	border-radius: 0px;
+}
+
+/*Make panels directly stacked with no spaces between*/
+.panel-group .panel+.panel {
+	margin-top: 0px; 
+}
+
+/*Thumbnail formatting, added white border to match given design*/
+.thumbnail {
+    margin-bottom: 0px;
+    border-radius: 0px;
+	width:100%;
+	height: 100%
+}
+
+/*Formatting for all panels, doesn't allow wrapping of titles/descriptions that are too long.*/
+.panel-default {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position:relative;
+    padding-top: 3%;
+}
+
+/*Formatting to make red box next to panel appear when hovering on it*/
+.panel:hover > .redbox{
+	background-color: #bf1313;
+}
+
+/*Make panel turn a light gray color when hovering on it*/
+.panel:hover{
+	background-color: #E1E4E6;
+}
+
+/*Remove underlining of "links" which are actually the panel headlines*/
+a:focus, a:hover {
+	text-decoration: none;
+}
+
+/*Formatting of all panel bodies once expanded. Adds black margin to thumbnail as seen in design.*/
+[class*="panel-body"] {
+	position: relative;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/*Set panel formatting to have no borders and be separated by thin lines to match design*/
+.panel {
+    border-top: 0px ; 
+    border-right: 0px ; 
+    border-left: 0px ; 
+
+}
+
+/*Formatting of red box that appears on panels. Make it invisible and set dimnensions and position.*/
+.panel-default > .redbox{
+    background-color: transparent;
+    width: 2%;
+    height: 3.8em;
+    position: absolute;
+}
+
+/*Background of collapsed panel set to black*/
+.collapse.in {
+    background-color: black;
+}
+
+/*Background of collapsing panel set to black for smooth animation*/
+.collapsing{
+	background-color: black;
+}
+
+
+
